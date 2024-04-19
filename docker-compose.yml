@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: subscribers
+      POSTGRES_USER: sa-subscribers
+      POSTGRES_PASSWORD: password
+
+  mysqldb:
+    image: "mysql:8.0"
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: post
+      MYSQL_USER: sa-blog
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: sa_root

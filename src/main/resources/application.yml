@@ -5,11 +5,11 @@ spring:
 app:
   datasource:
     blog:
-      url: jdbc:h2:mem:blog
+      url: jdbc:mysql://localhost:3306/post?allowPublicKeyRetrieval=true
       username: sa-blog
-      password:
+      password: password
 
     subscribers:
-      url: jdbc:h2:mem:subscribers
+      url: jdbc:postgresql://localhost:5432/subscribers
       username: sa-subscribers
-      password:
+      password: password

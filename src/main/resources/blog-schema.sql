@@ -1,5 +1,3 @@
-DROP TABLE IF EXISTS Post;
-
 CREATE TABLE Post (
     id varchar(255) NOT NULL,
     title varchar(255) NOT NULL,

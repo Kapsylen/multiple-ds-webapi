@@ -65,7 +65,7 @@ public class DataSourceConfiguration {
     public DataSourceScriptDatabaseInitializer subscribersDataSourceScriptDatabaseInitializer(@Qualifier("subscribersDataSource") DataSource dataSource) {
         var settings = new DatabaseInitializationSettings();
         settings.setSchemaLocations(List.of("classpath:subscribers-schema.sql"));
-        settings.setMode(DatabaseInitializationMode.EMBEDDED);
+        settings.setMode(DatabaseInitializationMode.ALWAYS);
         return new DataSourceScriptDatabaseInitializer(dataSource, settings);
     }
 }
